@@ -1,0 +1,71 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: inter;
+  font-style: normal;
+}
+
+body {
+  width: 1920px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.reg-form,
+.auth-form {
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+  background-color: #121212;
+  color: #fff;
+}
+
+.auth-form {
+  margin-top: 20px;
+}
+
+h1 {
+  font: 700 44px inter;
+  padding-top: 36px;
+  text-align: center;
+}
+
+input {
+  width: 352px;
+  padding: 10px;
+  border-radius: 20px;
+  border: 2px solid #bb86fc;
+  margin-left: 24px;
+  background-color: #000;
+  color: #fff;
+}
+
+input::placeholder {
+  color: #fff;
+}
+
+.email,
+.email2 {
+  margin-top: 53px;
+}
+
+.password,
+.password2 {
+  margin-top: 18px;
+}
+
+.registration-button,
+.login-button {
+  font: 500 15px inter;
+  width: 153px;
+  height: 38px;
+  background-color: #bb86fc;
+  color: #000;
+  border-radius: 20px;
+  text-align: center;
+  padding-top: 10px;
+  margin: 66px auto;
+}
