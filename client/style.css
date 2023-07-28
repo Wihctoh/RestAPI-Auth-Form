@@ -7,15 +7,79 @@
 }
 
 body {
-  width: 1920px;
+  width: 1100px;
+  margin: 0 auto;
+  display: flex;
 }
 
 a {
   text-decoration: none;
 }
 
-.reg-form,
-.auth-form {
+.register-form {
+  margin: 20px auto;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #121212;
+  border-radius: 10px;
+}
+
+h1 {
+  margin-top: 36px;
+  font: 700 44px inter;
+  color: #fff;
+}
+
+input {
+  display: block;
+  width: 352px;
+  background-color: #121212;
+  color: #fff;
+  border-radius: 10px;
+  border: 2px solid #bb86fc;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+input:first-child {
+  margin-top: 70px;
+}
+
+input::placeholder {
+  font: 500 15px inter;
+  color: rgba(255, 255, 255, 0.87);
+}
+
+.button-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.register-btn,
+.sing-in-btn {
+  margin-top: 70px;
+  color: #fff;
+  width: 352px;
+  border-radius: 20px;
+  background: #6200ee;
+  padding: 10px 0;
+  text-align: center;
+}
+.sing-in-btn:hover,
+.register-btn:hover {
+  color: lightgrey;
+  transition: 0.5s;
+}
+
+.sing-in-btn {
+  margin: 15px 0 26px 0;
+}
+
+/* ---------------------------- auth form ------------------------- */
+/* .auth-form {
   width: 400px;
   height: 400px;
   margin: 0 auto;
@@ -33,31 +97,14 @@ h1 {
   text-align: center;
 }
 
-input {
-  width: 352px;
-  padding: 10px;
-  border-radius: 20px;
-  border: 2px solid #bb86fc;
-  margin-left: 24px;
-  background-color: #000;
-  color: #fff;
-}
-
-input::placeholder {
-  color: #fff;
-}
-
-.email,
 .email2 {
   margin-top: 53px;
 }
 
-.password,
 .password2 {
   margin-top: 18px;
 }
 
-.registration-button,
 .login-button {
   font: 500 15px inter;
   width: 153px;
@@ -68,4 +115,4 @@ input::placeholder {
   text-align: center;
   padding-top: 10px;
   margin: 66px auto;
-}
+} */
