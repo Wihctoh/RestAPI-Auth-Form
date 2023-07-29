@@ -1,37 +1,47 @@
-document
-  .querySelector(".registration-button")
-  .addEventListener("click", async () => {
-    const reGinInp = document.querySelector(".email").value;
-    const pwdInp = document.querySelector(".password").value;
+document.querySelector(".register-btn").addEventListener("click", async () => {
+  const usernameInp = document.querySelector(".username").value;
+  const emailInp = document.querySelector(".email").value;
+  const phoneInp = document.querySelector(".phone").value;
+  const pwdInp = document.querySelector(".pwd").value;
+  const pwdConfirmInp = document.querySelector(".pwdConfirm").value;
 
-    const obj = { email: reGinInp, pwd: pwdInp };
+  const regValues = {
+    username: usernameInp,
+    email: emailInp,
+    phone: phoneInp,
+    pwd: pwdInp,
+    pwdConfirm: pwdConfirmInp,
+  };
 
-    const res = await fetch("http://localhost:3000/api/register", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(obj),
-    });
-
-    const json = await res.json();
-    console.log(json);
+  const response = await fetch("http://localhost:3000/api/register", {
+    method: "POST",
+    headers: { "Content-type": "application/json" },
+    body: JSON.stringify(regValues),
   });
+
+  const json = await response.json();
+
+  console.log(json);
+  alert(json.message);
+});
 
 document.querySelector(".login-button").addEventListener("click", async () => {
-  const loginInp = document.querySelector(".email2").value;
-  const pwdInp = document.querySelector(".password2").value;
+  const emailInp = document.querySelector(".email").value;
+  const pwdInp = document.querySelector(".pwd").value;
 
-  const obj = { email: loginInp, pwd: pwdInp };
+  const authValues = {
+    email: emailInp,
+    pwd: pwdInp,
+  };
 
-  const res = await fetch("http://localhost:3000/api/authorize", {
+  const response = await fetch("http://localhost:3000/api/authorize", {
     method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(obj),
+    headers: { "Content-type": "application/json" },
+    body: JSON.stringify(authValues),
   });
 
-  const json = await res.json();
+  const json = await response.json();
+
   console.log(json);
+  alert(json.message);
 });
